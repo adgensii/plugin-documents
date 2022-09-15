@@ -1,0 +1,9 @@
+{
+    "name": "Documents",
+    "namespace": "Botble\\Documents\\",
+    "provider": "Botble\\Documents\\Providers\\DocumentsServiceProvider",
+    "author": "AdgenSii Communication",
+    "url": "https://adgensii.com",
+    "version": "1.0",
+    "description": "Add attachments manager to posts, pages..."
+}

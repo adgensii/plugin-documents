@@ -1,0 +1,81 @@
+.list-documents {
+
+    .documents_image_wrapper {
+        aspect-ratio: 1 / 1;
+        background-color: #eff3f6;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            -webkit-transition: opacity 0.25s ease-in-out;
+            -moz-transition: opacity 0.25s ease-in-out;
+            -o-transition: opacity 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out;
+        }
+
+        &::before {
+            content: "\f044";
+            display: inline-block;
+            font: normal normal normal 14px/1 Font Awesome\ 5 Free;
+            font-weight: 400;
+            font-size: 18px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transform: translate(0, 0);
+            position: absolute;
+            top: 48%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            color: #fff;
+            z-index: 3;
+            opacity: 0;
+            -webkit-transition: opacity 0.25s ease-in-out;
+            -moz-transition: opacity 0.25s ease-in-out;
+            -o-transition: opacity 0.25s ease-in-out;
+            transition: opacity 0.25s ease-in-out;
+        }
+
+        i {
+            display: inline-block;
+            font-size: 40px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        span {
+            background-color: #d9e3ea;
+            font-size: 13px;
+            font-weight: bold;
+            display: block;
+            overflow: hidden;
+            padding: 6px;
+            text-align: center;
+            text-overflow: ellipsis;
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &::after, &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
