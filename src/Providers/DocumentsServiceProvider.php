@@ -34,12 +34,10 @@ class DocumentsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this
-            ->loadHelpers()
             ->loadAndPublishConfigurations(['general'])
             ->loadMigrations()
             ->loadAndPublishTranslations()
             ->loadAndPublishViews()
-            ->loadRoutes(['web'])
             ->loadMigrations()
             ->publishAssets();
 
