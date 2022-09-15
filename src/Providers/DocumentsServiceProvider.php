@@ -45,18 +45,6 @@ class DocumentsServiceProvider extends ServiceProvider
 
         $this->app->register(EventServiceProvider::class);
 
-        Event::listen(RouteMatched::class, function () {
-            dashboard_menu()->registerItem([
-                'id'          => 'cms-plugins-documents',
-                'priority'    => 5,
-                'parent_id'   => null,
-                'name'        => 'plugins/documents::documents.name',
-                'icon'        => 'fa fa-list',
-                'url'         => route('documents.index'),
-                'permissions' => ['documents.index'],
-            ]);
-        });
-
         $useLanguageV2 = $this->app['config']->get('plugins.documents.general.use_language_v2', false) &&
             defined('LANGUAGE_ADVANCED_MODULE_SCREEN_NAME');
 
